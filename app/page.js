@@ -38,7 +38,10 @@ function WelcomeHeader() {
 
   if (view === "Dashboard") {
     return (
-      <section aria-label="Welcome" className="border-b border-slate-200/80 pb-4">
+      <section
+        aria-label="Welcome"
+        className="border-b border-slate-200/80 pb-4 animate-fade-up"
+      >
         <div className="flex items-center gap-2 text-slate-500 text-sm flex-wrap">
           <FiCalendar aria-hidden="true" />
           <span>Monday, October 12, 2026</span>
@@ -80,7 +83,7 @@ function WelcomeHeader() {
   }
 
   return (
-    <section aria-label="Page header" className="border-b border-slate-200/80 pb-4">
+    <section aria-label="Page header" className="border-b border-slate-200/80 pb-4 animate-fade-up">
       <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">{meta.title}</h2>
       <p className="text-sm text-slate-500 mt-1">{meta.subtitle}</p>
     </section>
@@ -98,7 +101,7 @@ function AppShell() {
 
       <main className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-10 pt-4 lg:pt-8 pb-28 lg:pb-12 space-y-5 sm:space-y-6">
         <WelcomeHeader />
-        <div>
+        <div key={view} className="animate-fade-up">
           {view === "Dashboard" ? (
             <Dashboard />
           ) : view === "Gigs" ? (

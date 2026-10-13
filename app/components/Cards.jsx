@@ -10,7 +10,17 @@ const icons = {
   star: <FiStar className="text-amber-500 fill-amber-400" />,
 };
 
-export default function Cards({ name, value, short_txt, link, star, icon, icon_bg, onClick }) {
+export default function Cards({
+  name,
+  value,
+  short_txt,
+  link,
+  star,
+  icon,
+  icon_bg,
+  onClick,
+  delay = 0,
+}) {
   const isLinked = Boolean(link);
   const Wrapper = isLinked && onClick ? "button" : "div";
 
@@ -18,10 +28,11 @@ export default function Cards({ name, value, short_txt, link, star, icon, icon_b
     <Wrapper
       type={isLinked && onClick ? "button" : undefined}
       onClick={onClick}
-      className={`p-4 sm:p-5 rounded-xl border border-slate-200/80 w-full bg-white/95 group text-left transition-all duration-200 shadow-xs ${
+      style={{ animationDelay: `${delay}ms` }}
+      className={`p-4 sm:p-5 rounded-xl border border-slate-200/80 w-full bg-white/95 group text-left shadow-xs animate-fade-up ${
         isLinked && onClick
-          ? "cursor-pointer hover:border-slate-300 hover:shadow-sm"
-          : "cursor-default"
+          ? "cursor-pointer transition-all duration-200 hover:border-slate-300 hover:shadow-sm hover:-translate-y-0.5"
+          : "cursor-default transition-colors duration-200 hover:border-slate-300"
       }`}
     >
       <div className="items-center flex justify-between gap-2">

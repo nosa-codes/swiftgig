@@ -137,7 +137,7 @@ export default function NavBar() {
               >
                 <FiBell size={20} className="text-slate-700" />
                 {unreadCount > 0 ? (
-                  <span className="h-2.5 w-2.5 rounded-full bg-sky-500 border-2 border-white absolute top-2 right-2" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-sky-500 border-2 border-white absolute top-2 right-2 animate-pulse" />
                 ) : null}
               </button>
 
@@ -145,7 +145,7 @@ export default function NavBar() {
                 <div
                   role="menu"
                   aria-label="Notifications"
-                  className="absolute right-0 mt-2 w-[calc(100vw-2rem)] sm:w-96 bg-white border border-slate-200/80 rounded-xl shadow-lg overflow-hidden z-50"
+                  className="absolute right-0 mt-2 w-[calc(100vw-2rem)] sm:w-96 bg-white border border-slate-200/80 rounded-xl shadow-lg overflow-hidden z-50 origin-top-right animate-scale-in"
                 >
                   <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200/80">
                     <p className="font-bold text-sm tracking-tight">Notifications</p>
@@ -237,7 +237,7 @@ export default function NavBar() {
                 <div
                   role="menu"
                   aria-label="Account"
-                  className="absolute right-0 mt-2 w-64 bg-white border border-slate-200/80 rounded-xl shadow-lg overflow-hidden z-50"
+                  className="absolute right-0 mt-2 w-64 bg-white border border-slate-200/80 rounded-xl shadow-lg overflow-hidden z-50 origin-top-right animate-scale-in"
                 >
                   <div className="px-4 py-3 border-b border-slate-200/80">
                     <p className="text-sm font-bold tracking-tight">Alex Morgan</p>

@@ -28,7 +28,7 @@ export default function Modal({ open, onClose, title, children, footer, wide = f
     >
       <button
         type="button"
-        className="absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] cursor-default"
+        className="absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] cursor-default animate-fade-in"
         aria-label="Close dialog"
         onClick={onClose}
         tabIndex={-1}
@@ -36,7 +36,7 @@ export default function Modal({ open, onClose, title, children, footer, wide = f
       <div
         className={`relative w-full ${
           wide ? "sm:max-w-2xl" : "sm:max-w-lg"
-        } bg-white border border-slate-200/80 sm:rounded-xl rounded-t-xl shadow-xl max-h-[90dvh] flex flex-col overflow-hidden`}
+        } bg-white border border-slate-200/80 sm:rounded-xl rounded-t-xl shadow-xl max-h-[90dvh] flex flex-col overflow-hidden animate-scale-in`}
       >
         <div className="flex items-start justify-between gap-4 px-5 py-4 border-b border-slate-200/80">
           <h2 className="text-lg font-bold tracking-tight">{title}</h2>

@@ -16,3 +16,63 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+@keyframes sg-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sg-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sg-scale-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: sg-fade-up 0.35s ease-out both;
+}
+
+.animate-fade-in {
+  animation: sg-fade-in 0.18s ease-out both;
+}
+
+.animate-scale-in {
+  animation: sg-scale-in 0.18s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-scale-in {
+    animation: none;
+  }
+}

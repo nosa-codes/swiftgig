@@ -26,7 +26,7 @@ export function Dashboard() {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-        {metrics.map((metric) => (
+        {metrics.map((metric, index) => (
           <Cards
             key={metric.id}
             name={metric.name}
@@ -36,6 +36,7 @@ export function Dashboard() {
             star={metric.star}
             icon={metric.icon}
             icon_bg={metric.icon_bg}
+            delay={index * 60}
             onClick={metric.link ? () => handleMetricClick(metric) : undefined}
           />
         ))}
