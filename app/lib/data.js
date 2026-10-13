@@ -1,5 +1,5 @@
 export const user = {
-  name: "Alex Morgan",
+  name: "Egharevba Nosa",
   firstName: "Alex",
   role: "Verified Task Partner",
   rating: 4.9,

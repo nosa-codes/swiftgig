@@ -54,7 +54,7 @@ function WelcomeHeader() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mt-2.5">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
-              Good morning, Alex 👋
+              Good morning, Nosa
             </h2>
             <p className="text-sm text-slate-500 mt-1">
               Here&apos;s what&apos;s happening with your gigs today.

@@ -222,9 +222,9 @@ export default function NavBar() {
                 }}
                 className="flex items-center gap-2.5 border border-slate-200/80 p-1.5 pr-2 rounded-xl hover:bg-slate-50 transition-colors cursor-pointer"
               >
-                <Avatar name="Alex Morgan" available={available} />
+                <Avatar name="Egharevba Nosa" available={available} />
                 <span className="hidden md:block text-slate-600 font-semibold tracking-tight text-sm">
-                  Alex Morgan
+                  Egharevba Nosa
                 </span>
                 <FiChevronDown
                   className={`hidden md:block text-slate-500 transition-transform ${
@@ -240,7 +240,7 @@ export default function NavBar() {
                   className="absolute right-0 mt-2 w-64 bg-white border border-slate-200/80 rounded-xl shadow-lg overflow-hidden z-50 origin-top-right animate-scale-in"
                 >
                   <div className="px-4 py-3 border-b border-slate-200/80">
-                    <p className="text-sm font-bold tracking-tight">Alex Morgan</p>
+                    <p className="text-sm font-bold tracking-tight">Egharevba Nosa</p>
                     <p className="text-xs text-slate-500">Verified Task Partner</p>
                   </div>
                   <div className="p-1.5">
